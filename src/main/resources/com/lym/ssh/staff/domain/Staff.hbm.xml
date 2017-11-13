@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+        <hibernate-mapping package="com.lym.ssh.staff.domain">
+    <class name="Staff" table="crm_staff">
+        <id name="staffId" column="staffId">
+            <generator class="native"/>
+        </id>
+
+        <property name="staffName"/>
+        <property name="loginName"/>
+        <property name="loginPwd"/>
+        <property name="gender"/>
+        <property name="onDutyDate"/>
+
+    </class>
+</hibernate-mapping>

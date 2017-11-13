@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="MySQL - ssh@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="2.6">
+    <schema id="1" name="ssh">
+      <visible>1</visible>
+    </schema>
+    <schema id="2" name="casino"/>
+    <schema id="3" name="customers"/>
+    <schema id="4" name="day07hi"/>
+    <schema id="5" name="day13ssh"/>
+    <schema id="6" name="day2"/>
+    <schema id="7" name="day3"/>
+    <schema id="8" name="day6hibernate"/>
+    <schema id="9" name="day8"/>
+    <schema id="10" name="day9crm"/>
+    <schema id="11" name="demo"/>
+    <schema id="12" name="demo1"/>
+    <schema id="13" name="information_schema"/>
+    <schema id="14" name="mysql"/>
+    <schema id="15" name="one"/>
+    <schema id="16" name="performance_schema"/>
+    <schema id="17" name="students"/>
+    <schema id="18" name="sys"/>
+    <schema id="19" name="Test"/>
+    <schema id="20" name="Users"/>
+    <schema id="21" name="worker"/>
+    <table id="22" parent="1" name="crm_post"/>
+    <table id="23" parent="1" name="crm_department"/>
+    <table id="24" parent="1" name="crm_staff"/>
+    <column id="25" parent="22" name="postId">
+      <mandatory>1</mandatory>
+      <data-type>varchar(32)|0</data-type>
+    </column>
+    <column id="26" parent="22" name="postName">
+      <data-type>varchar(100)|0</data-type>
+    </column>
+    <column id="27" parent="22" name="deptId">
+      <data-type>varchar(32)|0</data-type>
+    </column>
+    <key id="28" parent="22" name="PRIMARY">
+      <columns>postId</columns>
+      <primary>1</primary>
+    </key>
+    <column id="29" parent="23" name="deptId">
+      <mandatory>1</mandatory>
+      <data-type>varchar(32)|0</data-type>
+    </column>
+    <column id="30" parent="23" name="depName">
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <key id="31" parent="23" name="PRIMARY">
+      <columns>deptId</columns>
+      <primary>1</primary>
+    </key>
+    <column id="32" parent="24" name="staffId">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="33" parent="24" name="staffName">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="34" parent="24" name="loginName">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="35" parent="24" name="loginPwd">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="36" parent="24" name="gender">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="37" parent="24" name="onDutyDate">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <key id="38" parent="24" name="PRIMARY">
+      <columns>staffId</columns>
+      <primary>1</primary>
+    </key>
+  </database-model>
+</dataSource>

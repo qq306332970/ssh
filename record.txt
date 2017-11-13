@@ -1,0 +1,37 @@
+Spring注解详解
+一. 用来标记组件.
+作用:
+用来标记组件属于哪个类型;
+确定从Spring容器中取出时的id.
+当不填入id时, id默认为当前类的名字, 其中首字母改为小写
+规律: 该类的注解当使用的时候, 那么所标记的类就会在Spring
+容器中自动创建对象.
+1. @Component 组件, 当某个类不明确属于某个组件时使用
+2. @Controller 控制器, 表现层, Action
+3. @Repository DAO层,
+4. @Service Service层
+例子:
+@Controller
+public class TestAction{
+
+}
+
+二. 可以标记属性/构造方法/setter方法
+为对应的属性自动赋值
+5. @Autowired 自动装箱, 根据所标记的属性类型自动赋值
+6. @Qualifier 指定该属性具体赋值为哪个实现类对象, 指定id
+7. @Resource 5.6功能的集成
+三.
+8. @Required 给某个属性的setter方法加标记
+该setter方法所对应的属性必须去xml的配置文件中为其赋值
+否则会抛出异常
+(注意:使用注解的方式赋值没有效果)
+
+四. 标记类中的某个方法, 就相当于xml配置文件中的:
+init-method和destroy-method
+9. @PostConstruct
+10. @PreDestroy
+
+五. 相当于xml配置中的scope属性,
+用来控制对象的加载方式
+11. @Scope

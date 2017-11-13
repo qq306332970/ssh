@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+
+
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.lym.ssh.crm.domain">
+
+    <class name="Staff" table="crm_staff">
+        <id name="staffId" column="staffId">
+            <generator class="native"/>
+        </id>
+    <property name="staffName"/>
+    <property name="gender"/>
+    <property name="onDutyDate"/>
+
+        <many-to-one name="dept" class="Department" column="deptId" cascade="save-update" lazy="false"/>
+
+        <many-to-one name="post" class="Post" column="postId" cascade="save-update" lazy="false"/>
+
+    </class>
+
+</hibernate-mapping>
